@@ -18,6 +18,11 @@ body {
 
 }
 
+@font-face {
+    font-family: 'Thesignature';
+    src: url('path/to/Thesignature.ttf') format('truetype');
+
+    
 .title {
     font-family: "Thesignature";
     font-size: 20vw;
