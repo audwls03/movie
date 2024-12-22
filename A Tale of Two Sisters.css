@@ -20,7 +20,7 @@ body {
 
 @font-face {
     font-family: 'Thesignature';
-    src: url('path/to/Thesignature.ttf') format('truetype');
+    src: url('font/Thesignature.ttf') format('truetype');
 
     
 .title {
