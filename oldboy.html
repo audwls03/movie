@@ -82,24 +82,6 @@
       document.body.style.cursor = "none"; // 창 크기 조정 시 커서 숨기기
     });
 
-
-    // 타이틀 회전
-    window.addEventListener('scroll', function () {
-      const dElement = document.getElementById('d');
-      const yElement = document.getElementById('y');
-      const scrollY = window.scrollY;
-
-      // D는 스크롤에 따라 즉시 회전
-      const rotationD = Math.max(-90, -scrollY / 5);
-
-      // Y는 D보다 약간 늦게 회전 시작 (50픽셀)
-      const rotationY = scrollY > 50 ? Math.max(-90, -(scrollY - 50) / 5) : 0;
-
-      // 회전 적용
-      dElement.style.transform = `rotate(${rotationD}deg)`;
-      yElement.style.transform = `rotate(${rotationY}deg)`;
-    });
-
     // 커서 이동
     document.addEventListener('mousemove', function (event) {
       const customCursor = document.getElementById('customCursor');
