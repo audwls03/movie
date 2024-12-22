@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: "Noto Sans KR", sans-serif;
     background: white;
     margin: 0;
     height: 100%;
@@ -11,7 +12,6 @@ body {
     word-break: keep-all;
     
 }
-
 .container {
     display: flex;
     align-items: center; /* 세로 가운데 정렬 */
@@ -21,7 +21,7 @@ body {
 }
 
 .title {
-font-family: 'Pretendard', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
