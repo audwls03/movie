@@ -83,6 +83,13 @@ a:focus {
 
 
 /* 장화홍련 */
+    @font-face {
+    font-family: 'Thesignature';
+    src: url('font/Thesignature.ttf'); /* 실제 폰트 파일의 URL */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .TwoSisters {
     width: 100%;
     height: 100vh;
