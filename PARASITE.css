@@ -20,7 +20,7 @@ body {
 }
 
 .title {
-
+    font-family: "Montserrat", serif;
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
