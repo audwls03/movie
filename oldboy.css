@@ -28,7 +28,7 @@ body {
 @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
 
 .title {
-    font-family: 'Noto Sans KR', serif;
+    
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
