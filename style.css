@@ -75,9 +75,9 @@ a:focus {
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
-    justify-content: center; 
+    justify-content: center;
     font-weight: 900;
-    white-space: nowrap; /* 줄 바꿈을 허용하지 않음 */
+    white-space: nowrap;
 }
 
 
