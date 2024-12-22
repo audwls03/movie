@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLD BOY</title>
+    <link rel="stylesheet" href="PARASITE.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="main">
+   <div class="container">
+      <div class="title">
+        PARASITE
+      </div>
+    </div>
+    
+  
+      <div class="image">
+          <img src="image/복숭아.svg">
+    </div>
+
+  
+
+  <div class="text">
+    아버지. 저는 오늘 계획을 세웠습니다.
+    <br />
+    근본적인 계획입니다.
+    <br />
+    돈을 벌겠습니다. 아주 많이.
+    <br />
+    대학, 취직, 결혼, 뭐 다 좋지만
+    <br />
+    일단 돈부터 벌겠습니다.
+    <br />
+    돈을 벌면 이 집부터 사겠습니다.
+    <br />
+    이사 들어가는 날에는 저는
+    <br />
+    엄마랑 정원에 있을게요.
+    <br />
+    햇살이 워낙 좋으니까요.
+    <br />
+    아버지는 그냥 계단만 올라오시면 됩니다.
+    <br />
+    그날이 올 때까지 건강하세요.
+    <br />
+    그럼 이만.
+</div>
+
+  </div>
+
+  <div class="back-button">
+    <button onclick="goBack()"><img src="image/back.svg"></button>
+  </div>
+
+  <img src="image/mouse.svg" class="custom-cursor" id="customCursor">
+
+  <script>
+
+      // 페이지 로드 시 기본 커서 숨기기
+  document.body.style.cursor = "none";
+
+// 스크롤 시 기본 커서 숨기기
+window.addEventListener('scroll', function () {
+  document.body.style.cursor = "none"; // 커서를 다시 숨김
+});
+// 창 크기 조정 시에도 기본 커서 숨기기
+window.addEventListener('resize', function () {
+  document.body.style.cursor = "none"; // 창 크기 조정 시 커서 숨기기
+});
+
+
+  
+
+// 커서 이동
+document.addEventListener('mousemove', function(event) {
+    const customCursor = document.getElementById('customCursor');
+    const cursorWidth = customCursor.offsetWidth; // 커서의 너비 가져오기
+    const cursorHeight = customCursor.offsetHeight; // 커서의 높이 가져오기
+
+    // 마우스 위치에서 커서의 절반 크기만큼 이동
+    customCursor.style.left = `${event.clientX - cursorWidth / 2}px`;
+    customCursor.style.top = `${event.clientY - cursorHeight / 2}px`;
+});
+
+
+
+    // 각 글자에 대한 이벤트 추가
+    const textSpans = document.querySelectorAll('.text span');
+    const customCursor = document.getElementById('customCursor');
+    const backButton = document.querySelector('.back-button button'); // 뒤로가기 버튼
+
+    // 글자에 대한 이벤트
+    textSpans.forEach(span => {
+      span.addEventListener('mouseenter', function () {
+        customCursor.style.width = '100px'; // 커서 크기 확대
+      });
+      span.addEventListener('mouseleave', function () {
+        customCursor.style.width = '50px'; // 원래 크기로 되돌리기
+      });
+    });
+
+    // 뒤로가기 버튼에 대한 이벤트
+    backButton.addEventListener('mouseenter', function () {
+      customCursor.style.width = '100px'; // 커서 크기 확대
+    });
+
+    backButton.addEventListener('mouseleave', function () {
+      customCursor.style.width = '50px'; // 원래 크기로 되돌리기
+    });
+
+
+
+    function goBack() {
+      window.history.back();  // 뒤로가기 기능
+    }
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

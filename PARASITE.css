@@ -1,0 +1,139 @@
+* {
+    cursor: none;
+}
+
+body {
+    background: #00694F;
+    margin: 0;
+    height: 100%;
+    color: white;
+    word-break: keep-all;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    height: 100vh; /* 전체 화면 높이 */
+
+
+}
+
+.title {
+    font-family: "Montserrat-SemiBold", sans-serif;;
+    font-size: 20vw;
+    max-width: 100%;
+    letter-spacing: -0.02em;
+    justify-content: center; 
+    font-weight: 600;
+    white-space: nowrap; /* 줄 바꿈을 허용하지 않음 */
+}
+
+
+
+.main {
+    padding: 20px;
+
+    display: flex; /* flexbox 사용 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    position: relative; /* relative로 유지 */
+    max-width: 1440px; /* 고정된 가로 크기 */
+    flex-direction: column;
+    margin: 0 auto; /* 좌우 마진을 자동으로 설정하여 가운데 정렬 */
+}
+
+
+/* 이미지가 순차적으로 나타나는 애니메이션 */
+@keyframes imageMove {
+    0% {
+        left: 100vw; /* 오른쪽 화면 밖으로 시작 */
+        opacity: 1;
+        visibility: visible;
+    }
+    40% {
+        left: 50vw; /* 화면 중앙으로 이동 */
+        opacity: 1;
+        visibility: visible;
+    }
+    99.9% {
+        left: -100vw; /* 왼쪽 화면 밖으로 이동 */
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        left: 100vw; /* 오른쪽 화면 밖으로 이동 */
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+.image {
+    position: fixed; /* 고정 위치 지정 */
+    top: 50%; /* 세로 중앙 */
+    transform: translate(0, -50%); /* 이미지 크기의 절반만큼 이동 */
+    width: 100%; /* 화면 너비에 맞게 설정 */
+    height: auto; /* 비율에 맞춰 자동으로 높이 조정 */
+    animation: imageMove 8s linear infinite; /* 9초 동안 이동하고 무한 반복 */
+    mix-blend-mode: Exclusion;
+    filter: saturate(2) contrast(1.2);
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+}
+
+
+
+.text {
+    margin-bottom: 100px;
+    text-align: center;
+    padding: 20px;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 74px;
+    line-height: 140%;
+    font-weight: 700;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative; /* 상대적 위치 */
+
+}
+
+
+/* 회전할 각도를 위한 클래스 추가 */
+.rotate {
+    display: inline-block; /* 회전 효과 적용을 위해 inline-block으로 설정 */
+    transition: transform 0.1s linear; /* 회전 시 전환 시간을 0.2초로 설정하여 부드러움 감소 */
+}
+
+
+.custom-cursor { 
+    position: fixed; /* 고정 위치 */
+    pointer-events: none; /* 마우스 이벤트 차단 */
+    z-index: 999; /* 다른 요소들 위에 표시 */
+    width: 50px; /* 기본 커서 크기 */
+    height: auto; /* 비율 유지 */
+    mix-blend-mode: exclusion; /* 혼합 모드 유지 */
+    filter: saturate(2) contrast(1.2);
+    transition: width 0.2s ease, height 0.2s ease; /* 크기 변경 시 부드러운 전환 */
+}
+
+
+/* 뒤로 가기 버튼 스타일 */
+.back-button {
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    z-index: 10; /* 다른 요소들 위에 버튼이 보이도록 */
+    mix-blend-mode: exclusion; /* Exclusion 혼합 효과 */
+}
+
+.back-button button {
+    background: transparent; /* 배경을 완전 투명하게 */
+    border: none;
+    cursor: none; /* 클릭할 수 있음을 나타내는 커서 */
+
+
+}
