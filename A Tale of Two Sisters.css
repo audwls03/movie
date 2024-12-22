@@ -18,9 +18,14 @@ body {
 
 }
 
-@font-face {
+
+
+    @font-face {
     font-family: 'Thesignature';
-    src: url('font/Thesignature.ttf') format('truetype');
+    src: url('font/Thesignature.ttf'); /* 실제 폰트 파일의 URL */
+    font-weight: normal;
+    font-style: normal;
+}
 
     
 .title {
