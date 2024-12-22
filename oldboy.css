@@ -19,26 +19,23 @@ body {
     height: 100vh; /* 전체 화면 높이 */
 
 }
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-style: normal;
 }
 
-
-
 .title {
-    font-family: "Pretendard", sans-serif;
+    font-family: 'Pretendard-Regular', sans-serif;
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
-    justify-content: center; 
+    justify-content: center;
     font-weight: 900;
-    white-space: nowrap; /* 줄 바꿈을 허용하지 않음 */
-    transform: rotate(0deg); /* 초기 회전 상태 */
+    white-space: nowrap;
+    transform: rotate(0deg);
 }
-
-
 
 .main {
     padding: 20px;
