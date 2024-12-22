@@ -126,7 +126,7 @@ a:focus {
 
 .PARASITE .title {
     color: white;
-    font-family: "Montserrat-SemiBold", sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20vw;
     max-width: 100%;
     letter-spacing: -0.02em;
